@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%=shopName%></title>
+  </head>
+  <body>
+    <h1><%=shopName%> Search</h1>
+    <form action="/search_result" method="GET">
+      <label for="name_box">Name:</label>
+      <input id="search_box" type="text" name="search_text">
+      <input type="submit" value="OK" >
+      
+
+      <label for="category_box">Category:</label>
+      <input id="search_cat" type="text" name="category">
+      <input type="submit" value="OK" >
+    </form>
+
+</html>
