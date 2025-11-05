@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><%= shopName %> - Survey</title>
+    <title><%=shopName%></title>
 </head>
 <body>
-    <h1><%= shopName %> Customer Survey</h1>
+    <h1><%=shopName%> Customer Survey</h1>
 
     <form method="POST" action="/survey_done">
         First Name:<input type="text" name="first" required><br>
@@ -12,7 +12,7 @@
         Email:<input type="email" name="email" required><br>
         Age:<input type="number" name="age" min="0" max="130" required><br>
         Which of the following drinks categories do you consume:<br> <% productCategories.forEach(function(category) { %>
-            <input type="radio" name="drinkCategory" value="<%= category %>" required> <%= category %><br>
+        <input type="radio" name="drinkCategory" value="<%= category %>" required> <%= category %><br>
         <% }) %>
         
         <input type="checkbox" name="isStudent"> Are you a student?<br><br>
