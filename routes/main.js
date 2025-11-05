@@ -32,7 +32,14 @@ router.post("/registered", (req,res) => {
     res.send(' Hello '+ req.body.first + ' '+ req.body.last +' you are now registered! We will send a confirmation email to '+ req.body.email );   
 })
 
+router.get("/survey", (req,res) => {
+    res.render("survey.ejs", shopData)
+});
 
+router.post("/survey_done", (req,res) => {
+    res.send(
+        ' Hello ' + req.body.first + ' '+ req.body.last +' We will send a confirmation email to ' +req.body.email+'Age: ' +req.body.age+' Drinks Category: ' +req.body.drinkCategory + ' Student: '+(req.body.isStudent === "on"?"Yes":"No"));
+});
 
 // Export the router object so index.js can access it
 module.exports = router;
